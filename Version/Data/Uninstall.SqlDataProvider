@@ -1,0 +1,23 @@
+﻿if exists (select * from {databaseOwner}sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_DeleteModuleRotator') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_DeleteModuleRotator
+GO
+
+if exists (select * from {databaseOwner}sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_GetModuleRotator') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_GetModuleRotator
+GO
+
+if exists (select * from {databaseOwner}sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_GetTabModules') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_GetTabModules
+GO
+
+if exists (select * from {databaseOwner}sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_UpdateModuleRotator') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_UpdateModuleRotator
+GO
+
+if exists (select * from {databaseOwner}sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_UpdateTabOrder') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_UpdateTabOrder
+GO
+
+if exists (select * from {databaseOwner}sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_ModuleRotator') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}DNNStuff_ModuleRotator_ModuleRotator
+GO
