@@ -168,7 +168,7 @@ Namespace DNNStuff.ModuleRotator
             ' setup to hide modules so that DNN doesn't render them outside our tabs .. we'll render them later in page load
             For Each _moduleSettings As ModuleInfo In modules
                 If HideTitles Then
-                    _moduleSettings.ContainerSrc = ResolveUrl("no container.ascx")
+                    _moduleSettings.ContainerSrc = ResolveUrl("~/Portals/_default/Containers/_default/no container.ascx")
                 End If
                 _moduleSettings.IsDeleted = True
             Next

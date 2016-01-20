@@ -18,7 +18,7 @@ Module Compatibility
                 If mr.ModuleNeeded(moduleNumber, moduleSettings) Then
 
                     If mr.HideTitles Then
-                        moduleSettings.ContainerSrc = mr.ResolveUrl("no container.ascx")
+                        moduleSettings.ContainerSrc = mr.ResolveUrl("~/Portals/_default/Containers/_default/no container.ascx")
                     End If
                     paneCtrl = New DotNetNuke.UI.Skins.Pane(CType(mr.FindControlRecursive(mr, moduleSettings.PaneName), HtmlContainerControl))
 
