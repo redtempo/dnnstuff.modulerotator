@@ -200,7 +200,6 @@
     <Content Include="ModuleRotator.ascx">
       <SubType>Form</SubType>
     </Content>
-    <Content Include="No Container.ascx" />
     <Content Include="Resources\Support\alert.png" />
     <Content Include="Resources\Support\close-icn.png" />
     <Content Include="Resources\Support\down-icn.png" />
@@ -240,6 +239,7 @@
     <None Include="Version\All\ModuleRotator.dnn" />
     <None Include="Version\Data\Uninstall.SqlDataProvider" />
     <Content Include="Version\Documentation\Index.html.md" />
+    <Content Include="Version\Documentation\Releases.html.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />
