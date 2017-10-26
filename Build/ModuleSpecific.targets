@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Company>DNNStuff</Company>
+    <ProductName>ModuleRotator</ProductName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectToBuild Include="..\$(Company).$(ProductName).vbproj" />
+    <ProjectToBuild Include="..\Providers\SqlDataProvider\$(Company).$(ProductName).SQLDataProvider.vbproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <MyResourceFiles Include="..\module.css" />
+    <MyResourceFiles Include="..\*.ascx"  Exclude="..\**\.git\**" />
+    <MyResourceFiles Include="..\App_LocalResources\*.resx" />
+    <MyResourceFiles Include="..\Resources\**\*.*" />
+    <MyResourceFiles Include="..\js\**\*.js" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <MyContentFiles Include="..\version\all\*.*" />
+    <MyContentFiles Include="..\version\data\*.*" />
+    <MyContentFiles Include="..\refs\*.*" />
+    <MyContentFiles Include="..\LICENSE" />
+  </ItemGroup>
+
+  <Import Project="DNNInstall.targets" />
+</Project>

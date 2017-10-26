@@ -44,9 +44,10 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\sites\dnn7.dnndev.me\bin\</OutputPath>
     <DocumentationFile>DNNStuff.ModuleRotator.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -65,7 +66,7 @@
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DocumentationFile>DNNStuff.ModuleRotator.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile>
@@ -85,7 +86,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Trial|AnyCPU' ">
     <DefineTrace>true</DefineTrace>
-    <OutputPath>..\..\dnn7.dev.com\bin\</OutputPath>
+    <OutputPath>..\..\sites\dnn7.dnndev.me\bin\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <BaseAddress>285212672</BaseAddress>
@@ -96,11 +97,11 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke">
-      <Name>DotNetNuke</Name>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN7' ">J:\TOOLING\BIN\DotNetNuke7\DotNetNuke.dll</HintPath>
-      <HintPath Condition=" '$(DNNVERSION)' == 'DNN8' ">J:\TOOLING\BIN\DotNetNuke8\DotNetNuke.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="DotNetNuke, Version=7.2.0.613, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetNuke.Core.7.2.0.613\lib\net40\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationBlocks.Data.2.0.0\lib\net40\Microsoft.ApplicationBlocks.Data.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -185,8 +186,7 @@
     <Content Include="Resources\Support\up-icn.png" />
     <Content Include="Resources\Support\warning-icn.png" />
     <Content Include="Resources\Support\yetii-min.js" />
-    <Content Include="Version\All\License.html" />
-    <Content Include="Version\All\icon_modulerotator_32px.gif" />
+    <Content Include="Resources\application.gif" />
     <EmbeddedResource Include="App_LocalResources\EditModuleRotator.ascx.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -202,20 +202,21 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Build\Build.bat" />
-    <None Include="Build\BuildFinal.bat" />
-    <None Include="Build\DeployFinal.bat" />
     <None Include="Build\ModuleSpecific.targets" />
-    <Content Include="Version\All\Version_Current.md" />
+    <Content Include="LICENSE" />
+    <None Include="packages.config" />
+    <Content Include="README.md" />
     <None Include="Version\Data\03.00.00.SqlDataProvider" />
     <None Include="Version\Data\03.00.01.SqlDataProvider" />
     <None Include="Version\All\ModuleRotator.dnn" />
     <None Include="Version\Data\Uninstall.SqlDataProvider" />
-    <Content Include="Version\Documentation\Index.html.md" />
-    <Content Include="Version\Documentation\Releases.html.md" />
+    <Content Include="Version\All\Release.html" />
+    <Content Include="docs\index.md" />
+    <Content Include="docs\releases.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="docs\images\" />
     <Folder Include="My Project\" />
-    <Folder Include="Version\Documentation\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -236,12 +237,12 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1124</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://dnn7.dev.com/DesktopModules/DNNStuff - ModuleRotator</IISUrl>
+          <IISUrl>http://dnn7.dnndev.me/DesktopModules/DNNStuff - ModuleRotator</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
-          <IISAppRootUrl>http://dnn7.dev.com</IISAppRootUrl>
+          <IISAppRootUrl>http://dnn7.dnndev.me</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>http://dnn7.dev.com/</CustomServerUrl>
+          <CustomServerUrl>http://dnn7.dnndev.me/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

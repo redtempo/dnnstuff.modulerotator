@@ -1,15 +1,3 @@
-'***************************************************************************/
-'* ModuleRotator.ascx.vb
-'*
-'* COPYRIGHT (c) 2004 by DNNStuff
-'* ALL RIGHTS RESERVED.
-'*
-'* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
-'* TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
-'* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF 
-'* CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
-'* DEALINGS IN THE SOFTWARE.
-'*************/
 Imports System
 Imports System.Web
 Imports System.Web.UI
@@ -84,9 +72,6 @@ Namespace DNNStuff.ModuleRotator
 
             MyBase.HelpURL = "http://www.dnnstuff.com/"
 
-#If CONFIG = "Trial" Then
-            If Now.Minute Mod 2 = 0 Then Common.AddTrialNotice(Me)
-#End If
             ' rendor tabs
             RenderModules()
         End Sub
