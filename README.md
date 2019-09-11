@@ -1,3 +1,5 @@
+<mark>IMPORTANT: This project is not being maintained going forward. If you are interested in taking over this repo, please open an issue and I'll make arrangements for the transfer</mark>
+
 # Module Rotator Module for DNN (DotNetNuke)
 
 Module Rotator is a DNN module that allows you to rotate the content of multiple modules in the space of a single module.
